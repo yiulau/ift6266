@@ -17,4 +17,6 @@ github_username: yiulau
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM # Enable Github Flavoured Markdown (fenced code blocks)
 exclude : [vendor]

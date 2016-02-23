@@ -5,6 +5,8 @@ date:   2016-02-10 16:28:42 -0500
 categories: jekyll update
 ---
 
+I do not have a lof of experience with the more advanced OOP features of Python or with NUMPY, so I spent some time reading up on the documentation. Then I spent a lot of time trying to install theano on my computer and on clusters to which I have access. Since I do not have GPUs locally, I looked into SSH tunneling to interact with compute nodes on clusters using Jupyter notebook. This last attempt wasn't successful. A lot of time was also spent on setting up this blog using Jekyll. 
+
 This is the first post. 
 
 I have done some exploratory analysis of the dataset at hand. [This](https://github.com/yiulau/ift6266/blob/master/exploratory_analysis.ipynb)
@@ -43,5 +45,48 @@ Include pictures/plots
 
 ![Picture of a cat]({{ site.baseurl }}/assets/2016-02-10/cat.jpg)
 
+
+Formatting mathematical symbols with latex.
+
+
+$$
+\begin{align}
+z=\sin(x)\\
+\end{align}
+$$
+
+$$
+\begin{align*}
+z_1=\sin(x)\\
+\end{align*}
+$$
+
+$$
+\begin{align}
+z_2=\sin(x)\\
+\end{align}
+$$
+
+Matrices:
+
+$$
+\begin{align}
+A= 
+\begin{pmatrix}
+1, &2 \\
+2, &3 \\
+\end{pmatrix}
+\end{align}
+$$
+
+Some neural networks equations:
+$$
+\begin{align}
+\mathbf{h} &=\sigma(W_1 \mathbf{x} +b_1) \\
+\mathbf{z} &= g(W_2 \mathbf{h} +b_2) \\
+\end{align}
+$$
+
+This is it for this post. In the next post I will explore Theano and train some neural networks. 
 
 

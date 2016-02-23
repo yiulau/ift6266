@@ -19,4 +19,5 @@ github_username: yiulau
 markdown: kramdown
 kramdown:
   input: GFM # Enable Github Flavoured Markdown (fenced code blocks)
+  math_engine: mathjax
 exclude : [vendor]

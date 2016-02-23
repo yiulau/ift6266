@@ -41,7 +41,7 @@ p<-1
 
 Include pictures/plots
 
-![Picture of a cat]({{ site.github.baseurl }}/assets/2016-02-10/cat.jpg)
+![Picture of a cat]({{ site.github.url }}/assets/2016-02-10/cat.jpg)
 
 
 

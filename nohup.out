@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "server.py", line 35, in <module>
+    upscale_stream, (32, 32), which_sources=('image_features',))
+  File "/home/yiulau/anaconda2/lib/python2.7/site-packages/fuel/transformers/image.py", line 208, in __init__
+    raise ImportError('window_batch_bchw not compiled')
+ImportError: window_batch_bchw not compiled

@@ -1,0 +1,1 @@
+23 --live-plot 0 --from-server 0 --num-epochs 50 --batch-size 8 --feature-maps --mlp-hiddens --conv-sizes --pool-sizes --image-size 260 --resume-training 0

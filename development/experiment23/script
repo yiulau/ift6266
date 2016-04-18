@@ -1,0 +1,42 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=1:gpus=1
+#PBS -l walltime=08:00:00
+#PBS -A sme-610-aa
+#PBS -V
+
+module add CUDA_Toolkit/6.5
+cp -r /gs/project/sme-610-aa/patrick/fuel_data $RAMDISK
+export FUEL_DATA_PATH=$RAMDISK/fuel_data
+
+cd /home/yiulau/ift6266/development/experiment$jobid
+ 
+
+#THEANO_FLAGS='device=cpu' python spawn_dataserver.py --datasource train &
+#THEANO_FLAGS='device=cpu' python spawn_dataserver.py --datasource valid &
+#feature_maps=(32 64 128 256)
+#mlp_hiddens=(4096 1000 1000)
+#conv_sizes=(3 3 3 3)
+#pool_sizes=(2 2 2 2)
+#image_size=260
+#batch_size=8
+# number of batches/epochs before stopping
+#num_batches=5
+#num_epochs=5
+
+#from_server=0
+#live_plot=0
+echo $jobid --live-plot $live_plot --from-server $from_server --num-epochs $num_epochs --batch-size $batch_size --feature-maps ${feature_maps[*]} --mlp-hiddens ${mlp_hiddens[*]} --conv-sizes ${conv_sizes[*]} --pool-sizes ${pool_sizes[*]} --image-size ${image_size[*]} --resume-training 0 > debugoutput
+ 
+if [ $from_server = 1 ]; then
+    THEANO_FLAGS='device=cpu' python spawn_dataserver.py --datasource train --image-size $image_size --batch-size $batch_size &
+    THEANO_FLAGS='device=cpu' python spawn_dataserver.py --datasource valid --image-size $image_size --batch-size $batch_size &
+fi
+
+if [ $live_plot = 1 ]; then
+    bokeh-server &
+fi
+
+#python convnet1.py dogvcats.pkl $jobid --live-plot $live_plot --from-server $from_server --num-epochs $num_epochs --batch-size $batch_size --feature-maps ${feature_maps[*]} --mlp-hiddens ${mlp_hiddens[*]} --conv-sizes ${conv_sizes[*]} --pool-sizes ${pool_sizes[*]} --image-size ${image_size[*]} --resume-training 0 
+
+
+

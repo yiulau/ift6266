@@ -1,0 +1,44 @@
+----------------------------------------
+Begin PBS Prologue Wed Apr 13 14:28:39 EDT 2016 1460572119
+Job ID:		55746806.gm-1r16-n04.guillimin.clumeq.ca
+Username:	yiulau
+Group:		sme-610-01
+Nodes:		aw-4r14-n31
+End PBS Prologue Wed Apr 13 14:28:39 EDT 2016 1460572119
+----------------------------------------
+epoch 0, lr is 0.1
+0.693525734429
+1.60037210789
+82511.4106571
+0.500801282051
+epoch total time is 279.59454298
+epoch 1, lr is 0.01
+0.693143509328
+4.83773072064
+82512.8229167
+0.500801282051
+epoch total time is 277.985581875
+epoch 2, lr is 0.00526315789474
+0.692981000321
+5.86908605618
+82513.1784856
+0.500801282051
+epoch total time is 278.121711016
+total time is 835.701956987
+----------------------------------------
+Begin PBS Epilogue Wed Apr 13 14:44:50 EDT 2016 1460573090
+Job ID:		55746806.gm-1r16-n04.guillimin.clumeq.ca
+Username:	yiulau
+Group:		sme-610-01
+Job Name:	script
+Session:	29065
+Limits:		neednodes=1:ppn=1:gpus=1,nodes=1:ppn=1:gpus=1,walltime=19:00:00
+Resources:	cput=00:14:10,energy_used=0,mem=686140kb,vmem=98276000kb,walltime=00:16:11
+Queue:		k20
+Account:	sme-610-aa
+Exit code:	0
+Nodes:	aw-4r14-n31
+Killing leftovers...
+
+End PBS Epilogue Wed Apr 13 14:44:52 EDT 2016 1460573092
+----------------------------------------

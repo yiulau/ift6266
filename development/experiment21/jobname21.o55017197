@@ -1,0 +1,25 @@
+----------------------------------------
+Begin PBS Prologue Thu Apr  7 14:48:19 EDT 2016 1460054899
+Job ID:		55017197.gm-1r16-n04.guillimin.clumeq.ca
+Username:	yiulau
+Group:		sme-610-01
+Nodes:		aw-4r14-n31
+End PBS Prologue Thu Apr  7 14:48:19 EDT 2016 1460054899
+----------------------------------------
+----------------------------------------
+Begin PBS Epilogue Thu Apr  7 14:49:55 EDT 2016 1460054995
+Job ID:		55017197.gm-1r16-n04.guillimin.clumeq.ca
+Username:	yiulau
+Group:		sme-610-01
+Job Name:	jobname21
+Session:	25794
+Limits:		neednodes=1:ppn=1:gpus=1,nodes=1:ppn=1:gpus=1,walltime=08:00:00
+Resources:	cput=00:00:13,energy_used=0,mem=267616kb,vmem=97701828kb,walltime=00:01:36
+Queue:		k20
+Account:	sme-610-aa
+Exit code:	2
+Nodes:	aw-4r14-n31
+Killing leftovers...
+
+End PBS Epilogue Thu Apr  7 14:49:57 EDT 2016 1460054997
+----------------------------------------

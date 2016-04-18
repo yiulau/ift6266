@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -l nodes=1:ppn=1:gpus=1
+#PBS -l walltime=19:00:00
+#PBS -A sme-610-aa
+#PBS -V
+#PBS -o debug_dout_output 
+
+
+module add CUDA_Toolkit/6.5
+cp -r /gs/project/sme-610-aa/patrick/fuel_data $RAMDISK
+export FUEL_DATA_PATH=$RAMDISK/fuel_data
+cd /home/yiulau/ift6266/development/theano_experiments
+ 
+
+#THEANO_FLAGS='device=cpu' python spawn_dataserver.py --datasource train &
+#THEANO_FLAGS='device=cpu' python spawn_dataserver.py --datasource valid &
+
+python debug_dout.py
+

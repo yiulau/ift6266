@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export MYVAR=1 
+qsub debugscript

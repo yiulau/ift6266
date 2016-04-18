@@ -1,0 +1,12 @@
+Using gpu device 0: Tesla K20m (CNMeM is enabled with initial size: 90.0% of memory, CuDNN 3007)
+usage: An example of training a convolutional network on the MNIST dataset.
+       [-h] [--num-epochs NUM_EPOCHS]
+       [--feature-maps FEATURE_MAPS [FEATURE_MAPS ...]]
+       [--mlp-hiddens MLP_HIDDENS [MLP_HIDDENS ...]]
+       [--conv-sizes CONV_SIZES [CONV_SIZES ...]]
+       [--pool-sizes POOL_SIZES [POOL_SIZES ...]] [--batch-size BATCH_SIZE]
+       [--from-server FROM_SERVER] [--num-batches NUM_BATCHES]
+       [--image-size IMAGE_SIZE] [--live-plot LIVE_PLOT]
+       [--resume-training RESUME_TRAINING]
+       [save_to] jobid
+An example of training a convolutional network on the MNIST dataset.: error: argument --feature-maps: expected at least one argument

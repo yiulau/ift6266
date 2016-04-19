@@ -3,4 +3,19 @@ layout: post
 title: Third and last post
 ---
 
-Test
+I was still debugging and trying new approaches at the time of submission, so this last post would simply be a summary of I what I have tried and point to relevant references to the code on github. 
+
+First I tried to code up a convolutional neural network in [blocks](https://github.com/yiulau/ift6266/blob/develop/blocks_experiment/convnet1.py),which is largely just a modification of [this](https://github.com/mila-udem/blocks-examples/tree/master/mnist_lenet). With some effort a working network was trained successfully and achieved less than 10 percent validation error. Then I looked into implementing tricks like dropout or gradient descent with momentum and was not satisfied with the black-box nature of things so I switched gear to implementing everything in theano. 
+
+[This](https://github.com/yiulau/ift6266/blob/develop/theano_experiments/self_code/debug.py) was the result of this approach and it achieved less than 10 percent validation error. 
+
+I tried to improve it by implementing dropout training. Unfortunately it is still in the debug phase and is incomplete.
+
+The convolutional neural network in question has 5 convolutional layers and 1 fully connected layer at the end. No regularization or data augmentation has been attempted. The model structure is inspired by [this](https://github.com/bartvm/dogs-vs-cats/blob/master/model.py). 
+
+A [fuel transformer](https://github.com/yiulau/ift6266/blob/develop/theano_experiments/self_code/rescale_transformer.py) has been coded up to transform images. In retrospect it is perhaps overengineered, containing many options to perform transformation which ended up not being used, what with all the trouble gone through just trying to get a working conv net. 
+
+Similarly, [functions](https://github.com/yiulau/ift6266/blob/develop/train_server.py) were written to set up fuel servers to process images in parallel that saw very little use. 
+
+Finally, [here](https://github.com/yiulau/ift6266/blob/develop/theano_experiments/self_code/post_training_analysis.ipynb) is some visualization of the trained network parameters and its outputs. 
+

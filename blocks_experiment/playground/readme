@@ -1,0 +1,1 @@
+In this directory. The convnet1.py code is modified to add a l2 penalty term to the weights of the last 2 connected layers .
